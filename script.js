@@ -4,7 +4,7 @@ const url = 'https://emojihub.yurace.pro/api/random';
 const options = {
 	method: 'GET',
 };
-const title = document.getElementById("title");
+const main = document.getElementById("main");
 
 async function freeAPI() {
     try {
@@ -14,7 +14,7 @@ async function freeAPI() {
         const h1 = document.createElement("h1");
         h1.innerHTML = result.htmlCode[0];
         h1.setAttribute("style", "font-size: 10rem")
-        title.insertAdjacentElement("afterend", h1);
+        main.insertAdjacentElement("afterbegin", h1);
     } catch (error) {
         console.error(error);
     }
